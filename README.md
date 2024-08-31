@@ -1,4 +1,4 @@
-## GitOwl Browser Extension
+## GitOwl Browser Extension For Firefox
 
 <h3 align="center">
   <b><a href="https://gitowl.dev">gitowl.dev</a></b>
@@ -8,7 +8,8 @@
 
 ![Screenshot](screenshot.png)
 
-This repository contains the source code for GitOwl browser extension.
+This repository contains the source code for the UNOFFICIAL GitOwl Firefox browser extension.
+
 
 The extension aims to interact as little as possible with the websites on which it is run.
 
@@ -55,9 +56,29 @@ To run the extension locally
 $ npm install
 $ npm run build
 ```
+- In the `dist/` folder that was now created, modify the `manifest.json` file to include extension_id.
+  - Add the block
+  ```json
+    "browser_specific_settings": {
+  "gecko": {
+    "id": "{insert-your-extension-uuid}"
+  }
+  ```
+  - you can generate your uuid using [online uuid generators](https://www.uuidgenerator.net/version4)
+  - be sure to enclose your id using "{}"
+  - Example id:
+  ```json
+  "id": "{ee24b1ac-6de9-402d-bbfa-32c647b385d1}"
+  ```
+- navigate to `dist/` folder & run `zip -r gitowl.xpi manifest.json contentscript.js framescript.js frame.html favicon@16x16.png favicon@48x48.png favicon@128x128.png` to generate a `.xpi` extension file.
 
 ### Load the extension
 
-- Open the Extension Management page by navigating to `chrome://extensions`.
-- Enable Developer Mode by clicking the toggle switch next to Developer mode.
-- Click the LOAD UNPACKED button and select the `dist` directory.
+- Open the Extension Management page by navigating to `about:debugging` in Firefox.
+- Click `This Firefox` button on the left and then click `Load Temporary Add-on` button
+- Select the `.xpi` file we generated in the previous step
+
+---
+
+- All images & rights reserved to original authors of the GitOwl package.
+- GitOwl homepage: [link](https://gitowl.dev/)
