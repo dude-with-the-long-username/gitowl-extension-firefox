@@ -4,12 +4,15 @@
   <b><a href="https://gitowl.dev">gitowl.dev</a></b>
   <span> • </span>
   <b><a href="https://chrome.google.com/webstore/detail/gitowl/gijnkijpbdlefjnobncjfongkbpoohdb">chrome</a></b>
+  <span> • </span>
+  <b><a href="https://addons.mozilla.org/en-US/firefox/addon/gitowl-open-source-insights-at/">Firefox</a></b>
 </h3>
 
 ![Screenshot](screenshot.png)
 
 This repository contains the source code for the UNOFFICIAL GitOwl Firefox browser extension.
 
+[Firefox extension link](https://addons.mozilla.org/en-US/firefox/addon/gitowl-open-source-insights-at/)
 
 The extension aims to interact as little as possible with the websites on which it is run.
 
